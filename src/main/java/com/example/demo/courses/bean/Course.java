@@ -1,17 +1,16 @@
-package com.abc.demo.courses.bean;
+package com.example.demo.courses.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name="course1")
+@Entity(name="course")
 public class Course {
 	@Id
 //	@GeneratedValue
 	private int id; 
 	
-	@Column(name="course_name")
 	private String name;
 	private String auther;
 	
@@ -27,11 +26,23 @@ public class Course {
 	}
 	
 	public int getId() {
-		return id;
+		return id; 
 	}
 
 	public String getName() {
 		return name;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setAuther(String auther) {
+		this.auther = auther;
 	}
 
 	public String getAuther() {
@@ -42,5 +53,4 @@ public class Course {
 	public String toString() {
 		return "Course [id=" + id + ", name=" + name + ", auther=" + auther + "]";
 	}
-
 }
